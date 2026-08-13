@@ -58,8 +58,8 @@ export async function createCardTransaction(
 
   const payload: TablesInsert<"fuel_card_transactions"> = {
     ...parsed,
-    amount: parsed.amount,
-    transacted_at: parsed.transacted_at,
+    amount: parsed.amount!,
+    transacted_at: parsed.transacted_at!,
   };
 
   const supabase = await createClient();
@@ -90,8 +90,8 @@ export async function updateCardTransaction(
 
   const payload: TablesInsert<"fuel_card_transactions"> = {
     ...parsed,
-    amount: parsed.amount,
-    transacted_at: parsed.transacted_at,
+    amount: parsed.amount!,
+    transacted_at: parsed.transacted_at!,
   };
 
   const supabase = await createClient();

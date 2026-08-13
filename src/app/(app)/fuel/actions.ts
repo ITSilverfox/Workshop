@@ -58,9 +58,9 @@ export async function createFuelEntry(
 
   const payload: TablesInsert<"fuel_entries"> = {
     ...parsed,
-    vehicle_id: parsed.vehicle_id,
-    odometer_km: parsed.odometer_km,
-    price_per_unit: parsed.price_per_unit,
+    vehicle_id: parsed.vehicle_id!,
+    odometer_km: parsed.odometer_km!,
+    price_per_unit: parsed.price_per_unit!,
     entry_date: parsed.entry_date ?? new Date().toISOString().slice(0, 10),
   };
 
@@ -92,9 +92,9 @@ export async function updateFuelEntry(
 
   const payload: TablesInsert<"fuel_entries"> = {
     ...parsed,
-    vehicle_id: parsed.vehicle_id,
-    odometer_km: parsed.odometer_km,
-    price_per_unit: parsed.price_per_unit,
+    vehicle_id: parsed.vehicle_id!,
+    odometer_km: parsed.odometer_km!,
+    price_per_unit: parsed.price_per_unit!,
     entry_date: parsed.entry_date ?? new Date().toISOString().slice(0, 10),
   };
 

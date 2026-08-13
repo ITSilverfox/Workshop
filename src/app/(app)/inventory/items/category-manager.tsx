@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { useActionState } from "react";
+import { useState, useActionState } from "react";
 import { Tags, Pencil, Trash2 } from "lucide-react";
 import {
   createItemCategory,
@@ -58,13 +57,15 @@ function label(value: string) {
 }
 
 function PurchaseTypeSelect({
+  id,
   defaultValue,
 }: {
+  id?: string;
   defaultValue?: string | null;
 }) {
   return (
     <Select name="purchase_type" defaultValue={defaultValue ?? undefined}>
-      <SelectTrigger className="w-full">
+      <SelectTrigger id={id} className="w-full">
         <SelectValue placeholder="Select a purchase type" />
       </SelectTrigger>
       <SelectContent>
@@ -96,7 +97,7 @@ function AddCategoryForm() {
       </Field>
       <Field className="sm:w-44">
         <FieldLabel htmlFor="new_category_purchase_type">Purchase type</FieldLabel>
-        <PurchaseTypeSelect />
+        <PurchaseTypeSelect id="new_category_purchase_type" />
       </Field>
       <Button type="submit" disabled={pending}>
         {pending ? "Adding…" : "Add"}
@@ -136,7 +137,10 @@ function CategoryEditRow({
             <FieldLabel htmlFor={`edit_purchase_type_${category.id}`}>
               Purchase type
             </FieldLabel>
-            <PurchaseTypeSelect defaultValue={category.purchase_type} />
+            <PurchaseTypeSelect
+              id={`edit_purchase_type_${category.id}`}
+              defaultValue={category.purchase_type}
+            />
           </Field>
           <div className="flex gap-2">
             <Button type="submit" size="sm" disabled={pending}>
