@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nida Fleet",
-  description: "Fleet, workshop, and expense management for Nida.",
+  title: "Workshop Management",
+  description: "Fleet, workshop, and expense management.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

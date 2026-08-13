@@ -50,7 +50,7 @@ export function AppSidebar({
                 <div className="flex size-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
                   <Truck className="size-4" />
                 </div>
-                <span className="text-base font-semibold">Nida Fleet</span>
+                <span className="text-base font-semibold">Workshop Management</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

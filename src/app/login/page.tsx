@@ -15,7 +15,7 @@ export default async function LoginPage(props: PageProps<"/login">) {
     <div className="flex min-h-svh w-full items-center justify-center bg-muted/30 p-6">
       <Card className="w-full max-w-sm">
         <CardHeader>
-          <CardTitle className="text-xl">Nida Fleet</CardTitle>
+          <CardTitle className="text-xl">Workshop Management</CardTitle>
           <CardDescription>
             Sign in to manage vehicles, drivers, and workshop operations.
           </CardDescription>

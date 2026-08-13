@@ -38,7 +38,7 @@ export default async function AppLayout({ children }: LayoutProps<"/">) {
           <SidebarTrigger className="-ml-1" />
           <Separator orientation="vertical" className="h-4" />
           <span className="text-sm font-medium text-muted-foreground">
-            Nida Fleet & Workshop Management
+            Workshop Management
           </span>
         </header>
         <main className="flex flex-1 flex-col gap-4 p-4 md:p-6">
