@@ -1,0 +1,28 @@
+import type { SVGProps } from "react";
+
+export function FoxIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="
+          M 12 6.3
+          L 6.6 1.3
+          C 5.9 0.7 4.9 1.3 5.1 2.2
+          L 6.3 8.8
+          C 3.9 10.6 2.5 13.4 2.5 16.5
+          C 2.5 19.6 5.5 22.7 12 23.3
+          C 18.5 22.7 21.5 19.6 21.5 16.5
+          C 21.5 13.4 20.1 10.6 17.7 8.8
+          L 18.9 2.2
+          C 19.1 1.3 18.1 0.7 17.4 1.3
+          Z
+        "
+      />
+    </svg>
+  );
+}

@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, BellRing, Truck } from "lucide-react";
+import { LayoutDashboard, BellRing } from "lucide-react";
 
+import { FoxIcon } from "@/components/fox-icon";
 import {
   Sidebar,
   SidebarContent,
@@ -48,7 +49,7 @@ export function AppSidebar({
             <SidebarMenuButton size="lg" asChild>
               <Link href="/dashboard">
                 <div className="flex size-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
-                  <Truck className="size-4" />
+                  <FoxIcon className="size-4" />
                 </div>
                 <span className="text-base font-semibold">Workshop Management</span>
               </Link>
